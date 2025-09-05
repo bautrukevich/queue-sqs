@@ -77,7 +77,7 @@ class Adapter implements AdapterInterface
         }
     }
 
-    public function withChannel(string $channel): AdapterInterface
+    public function withChannel(string|BackedEnum $channel): AdapterInterface
     {
         if ($channel == $this->channelName) {
             return $this;
